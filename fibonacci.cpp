@@ -1,21 +1,19 @@
 #include <iostream>
 
 using namespace std;
+const int fib_0 = 0;
+const int fib_1 = 1;
 
 
-int fibFunction(uint64_t previousNum, uint64_t fibNum, int n)
+
+int fibFunction(int n)
 {
-    uint64_t ret;
-    uint64_t nextNum;
-    cout << "F: " << " = " << previousNum << endl;
 
     if (n <= 1 ) {
-        return previousNum;
+        return n;
     } else {
-        ret = fibFunction(fibNum, previousNum + fibNum, n -1);
+        return (fibFunction(n-1) + fibFunction(n-2));
     }
-
-    return ret;
 }
 
 int main(int argc, char** argv)
@@ -25,7 +23,7 @@ int main(int argc, char** argv)
     cout << "Please enter a positive integer greater than 1: ";
     cin >> num;
 
-    ret = fibFunction(0, 1, num);
+    ret = fibFunction(num);
 
     cout << "Fibonati Number is: " << ret << endl;
 
