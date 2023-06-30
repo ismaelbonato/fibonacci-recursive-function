@@ -1,5 +1,3 @@
-# First lab from Introduction to Programming in C++ course on EDX.
-
 # How to compile
 
 ```
